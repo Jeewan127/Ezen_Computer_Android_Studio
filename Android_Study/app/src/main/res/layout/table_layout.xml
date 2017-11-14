@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0,1,2,3"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="377dp"
+        android:gravity="center_horizontal|center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <TableRow
+        android:id="@+id/first_row"
+        android:gravity="bottom">
+        <Button
+            android:text="C" />
+        <Button
+            android:text="+/-" />
+        <Button
+            android:text="%" />
+        <Button
+            android:text="/"/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:text="7" />
+        <Button
+            android:text="8" />
+        <Button
+            android:text="9" />
+        <Button
+            android:text="*"/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:text="4" />
+        <Button
+            android:text="5" />
+        <Button
+            android:text="6" />
+        <Button
+            android:text="-"/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:text="1" />
+        <Button
+            android:text="2" />
+        <Button
+            android:text="3" />
+        <Button
+            android:text="+"/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:text="0"
+            android:layout_span="2"/>
+        <Button
+            android:text="."
+            android:layout_column="2"/>
+        <Button
+            android:text="="
+            android:layout_column="3"/>
+    </TableRow>
+
+</TableLayout>
