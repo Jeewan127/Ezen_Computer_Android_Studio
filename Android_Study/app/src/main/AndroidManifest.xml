@@ -9,7 +9,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".EvenOddNumber" />
+        <activity android:name=".Test01Activity" />
+        <activity android:name=".Test02Activity" />
+        <activity android:name=".Mine01Activity" />
+        <activity android:name=".Animation01Activity" />
+        <activity android:name=".AdapterMainActivity" />
+        <activity android:name=".model.PopupActivity" />
+        <activity android:name=".Activity1Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Act1Activity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".Act2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

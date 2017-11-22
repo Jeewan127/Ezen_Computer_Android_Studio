@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.project01.DetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/details_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:background="@drawable/ic_back_gray"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="17dp"
+            android:textColor="#232323"
+            android:text="상세 내역"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/details_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_below="@+id/details_top_bar"
+        android:background="#979797"/>
+    <RelativeLayout
+        android:id="@+id/details_second_bar"
+        android:layout_below="@+id/details_line"
+        android:layout_marginTop="19dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/details_oval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_blue"
+            android:layout_marginLeft="19.5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10.5dp"
+            android:layout_toEndOf="@+id/details_oval"
+            android:text="수입"
+            android:textColor="#00a99a"
+            android:textSize="27.5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/details_third_bar"
+        android:layout_below="@+id/details_second_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.5dp">
+        
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:background="@drawable/img_won"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="72dp"
+            android:text="10,000"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20.8dp"
+            android:textColor="#587bab"/>
+
+    </RelativeLayout>
+    
+    <Button
+        android:layout_below="@+id/details_third_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/delete_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="삭제"
+        android:textSize="25dp"
+        android:textColor="#ffffff"/>
+
+</RelativeLayout>

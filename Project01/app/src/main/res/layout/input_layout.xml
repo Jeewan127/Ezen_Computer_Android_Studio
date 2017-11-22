@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35.5dp">
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14.5sp"
+            android:textColor="#4b4242"
+            android:text="2017/06/01"
+            android:layout_marginTop="9.3dp"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/x_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_round_black_close"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14.3dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginTop="46dp">
+
+        <EditText
+            android:id="@+id/input_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="72dp"
+            android:textColor="#587bab"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="19.3dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_won"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/deposit"
+            android:layout_width="150dp"
+            android:layout_height="67.5dp"
+            android:background="@drawable/rectangle_3_2"
+
+            android:text="입금"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/expense"
+            android:layout_width="150dp"
+            android:layout_height="67.5dp"
+            android:background="@drawable/rectangle_3"
+            android:layout_marginLeft="20.3dp"
+            android:layout_toRightOf="@+id/deposit"
+            android:text="지출"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
