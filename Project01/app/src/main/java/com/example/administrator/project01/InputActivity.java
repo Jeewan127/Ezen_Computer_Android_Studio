@@ -66,6 +66,9 @@ public class InputActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String cost = input_price.getText().toString();
+                if(cost.equals("") || cost.equals("0")) {
+                    return;
+                }
 
                 int type = 1;
 

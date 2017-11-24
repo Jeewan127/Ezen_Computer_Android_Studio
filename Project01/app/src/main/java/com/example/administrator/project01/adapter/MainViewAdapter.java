@@ -1,5 +1,6 @@
 package com.example.administrator.project01.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,8 +21,10 @@ import java.util.ArrayList;
 public class MainViewAdapter extends BaseAdapter {
 
     ArrayList<Housekeep> items = new ArrayList<>();
+    Context context;
 
-    public MainViewAdapter(ArrayList<Housekeep> housekeeps) {
+    public MainViewAdapter(Context context, ArrayList<Housekeep> housekeeps) {
+        this.context = context;
         this.items = housekeeps;
     }
 
@@ -71,22 +74,21 @@ public class MainViewAdapter extends BaseAdapter {
 
         holder.main_textview1.setText(item.getCost().toString());
 
+        final int tmpI = position;
         holder.main_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                items.remove(position);
+                items.remove(tmpI);
                 notifyDataSetChanged();
             }
         });
         return convertView;
     }
 
-
-
     private class Holder {
         TextView main_textview1;
         TextView main_textview2;
         ImageView main_img_oval;
-        Button main_delete;
+        ImageView main_delete;
     }
 }

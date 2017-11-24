@@ -13,6 +13,7 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/details_back_btn"
             android:layout_width="43dp"
             android:layout_height="43dp"
             android:background="@drawable/ic_back_gray"/>
@@ -43,10 +44,10 @@
             android:id="@+id/details_oval"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/oval_blue"
             android:layout_marginLeft="19.5dp"/>
 
         <TextView
+            android:id="@+id/details_text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10.5dp"
@@ -71,6 +72,7 @@
             android:layout_marginLeft="20dp"/>
 
         <TextView
+            android:id="@+id/details_text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="72dp"
@@ -82,6 +84,7 @@
     </RelativeLayout>
     
     <Button
+        android:id="@+id/details_btn"
         android:layout_below="@+id/details_third_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -40,7 +40,7 @@
             android:layout_marginLeft="12.2dp"
             android:layout_marginTop="39.3dp"/>
 
-        <Button
+        <ImageView
             android:id="@+id/main_delete"
             android:layout_width="36.3dp"
             android:layout_height="36.3dp"

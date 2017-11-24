@@ -17,28 +17,15 @@
         <activity android:name=".Animation01Activity" />
         <activity android:name=".AdapterMainActivity" />
         <activity android:name=".model.PopupActivity" />
-        <activity android:name=".Activity1Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Activity2Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Act1Activity" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-        <activity android:name=".Act2Activity">
+        <activity android:name=".Activity1Activity" />
+        <activity android:name=".Activity2Activity" />
+        <activity android:name=".Act1Activity" />
+        <activity android:name=".Act2Activity" />
+        <activity android:name=".Intent01Activity" />
+        <activity android:name=".Intent02Activity" />
+        <activity android:name=".IntentActivity" />
+        <activity android:name=".model.Animation02Activity"/>
+        <activity android:name=".DbTest01Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

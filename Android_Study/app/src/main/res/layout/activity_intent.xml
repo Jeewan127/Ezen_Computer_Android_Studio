@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.android_study.IntentActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/intent_main_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start act1"/>
+    <TextView
+        android:id="@+id/intent_main_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="40dp"/>
+    <Button
+        android:id="@+id/intent_main_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start act2"/>
+    <TextView
+        android:id="@+id/intent_main_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="40dp"/>
+
+</LinearLayout>
