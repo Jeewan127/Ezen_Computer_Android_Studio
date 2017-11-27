@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.administrator.project01.Housekeep;
 import com.example.administrator.project01.R;
+import com.example.administrator.project01.db.DBManager;
 
 import java.util.ArrayList;
 
@@ -22,10 +23,12 @@ public class MainViewAdapter extends BaseAdapter {
 
     ArrayList<Housekeep> items = new ArrayList<>();
     Context context;
+    DBManager dbManager;
 
-    public MainViewAdapter(Context context, ArrayList<Housekeep> housekeeps) {
+    public MainViewAdapter(Context context, ArrayList<Housekeep> housekeeps, DBManager dbManager) {
         this.context = context;
         this.items = housekeeps;
+        this.dbManager = dbManager;
     }
 
     @Override
@@ -62,7 +65,6 @@ public class MainViewAdapter extends BaseAdapter {
         }
 
         Housekeep item = (Housekeep)getItem(position);
-        holder.main_delete.setBackgroundResource(R.drawable.ic_edit_delete_keycolor);
 
         if(item.getType() == 0) {
             holder.main_textview2.setText("지출");
@@ -75,10 +77,12 @@ public class MainViewAdapter extends BaseAdapter {
         holder.main_textview1.setText(item.getCost().toString());
 
         final int tmpI = position;
+        final int id = item.getId();
         holder.main_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 items.remove(tmpI);
+                dbManager.deleteData(id);
                 notifyDataSetChanged();
             }
         });

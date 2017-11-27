@@ -25,9 +25,9 @@ public class DBManager extends SQLiteOpenHelper {
 
         db.execSQL(query);  // execSQL: DB명령어를 실행
 
-        db.execSQL("Insert into Book values (null, 'publisher1', 10000);"); // 데이터 추가
+/*        db.execSQL("Insert into Book values (null, 'publisher1', 10000);"); // 데이터 추가
         db.execSQL("Insert into Book values (null, 'Java Programming2', 4000);");
-        db.execSQL("Insert into Book values (null, 'Java Programming3', 2000);");
+        db.execSQL("Insert into Book values (null, 'Java Programming3', 2000);");*/
     }
 
     @Override //
@@ -51,7 +51,7 @@ public class DBManager extends SQLiteOpenHelper {
             String name = cursor.getString(1);
             Integer price = cursor.getInt(2);
 
-            Log.d("test", id + "=" + name +"="+price); // 로그로 확인
+            Log.d("test", "id: " + id + "  name: " + name +"  price: "+ price); // 로그로 확인
         }
     }
 

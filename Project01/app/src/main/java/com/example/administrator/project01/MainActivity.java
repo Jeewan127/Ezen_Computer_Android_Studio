@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.administrator.project01.adapter.MainViewAdapter;
+import com.example.administrator.project01.db.DBManager;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    DBManager dbManager;
     ListView main_listview;
     MainViewAdapter mainViewAdapter;
     Button main_plus_button;
@@ -40,7 +42,10 @@ public class MainActivity extends AppCompatActivity {
         // 날짜 출력
         main_act_textView1.setText(time);
 
-        mainViewAdapter = new MainViewAdapter(MainActivity.this, housekeeps);          // MainViewAdapter 생성자 생성,
+        dbManager = new DBManager(MainActivity.this, "Housekeep.db", null, 1); // db 생성
+        housekeeps = dbManager.getCostList();
+
+        mainViewAdapter = new MainViewAdapter(MainActivity.this, housekeeps, dbManager);          // MainViewAdapter 생성자 생성,
         main_listview.setAdapter(mainViewAdapter);   // 연결 리스트뷰에 사용할 데이터 객체(mainViewAdapter)를 넘겨줌
 
         main_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {   // ListView를 클릭 했을 때 동작
@@ -52,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("cost", item.getCost()); // cost란 이름으로 Housekeep 클래스에 있는 cost값을 보냄
                 intent.putExtra("type", item.getType()); // type이란 이름으로 Housekeep 클래스에 있는 type값을 보냄
                 intent.putExtra("pos", position); // pos란 이름으로 position값을 보냄
+                intent.putExtra("id", item.getId());
                 startActivityForResult(intent, 1); // DetailsActivity 클래스로 넘어감, 고유번호: 1
             }
         });
@@ -64,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0); // InputActivity 클래스로 넘어감, 고유번호: 0
             }
         });
+
     }
 
     // onActivityResult: A에서 B로 갔다가 다시 A로 넘어 올때 사용
@@ -76,15 +83,17 @@ public class MainActivity extends AppCompatActivity {
                 Integer cost = data.getIntExtra("cost", 0); // intent data에 저장되어 있는 cost이름을 가진 데이터 값을 Integer cost에 넣어줌
                 Integer type = data.getIntExtra("type", 0); // intent data에 저장되어 있는 type이름을 가진 데이터 값을 Integer type에 넣어줌
 
-                Housekeep item = new Housekeep(cost, type); // Housekepp 생성
-                housekeeps.add(item);   // ArrayList에 item
-                mainViewAdapter.notifyDataSetChanged();
+                dbManager.insertData(type, cost, 2017, 11, 27);
+                housekeeps = dbManager.getCostList();
+                mainViewAdapter = new MainViewAdapter(MainActivity.this, housekeeps, dbManager);
+                main_listview.setAdapter(mainViewAdapter);
             }
         } else if(requestCode == 1) {
             if(resultCode == RESULT_OK) {   // setResult에서 RESULT_OK를 받았으면
                 int pos = data.getIntExtra("pos", 0);   // Intent가 보낸 pos의 이름의 데이터를 pos에 저장
-
+                int id = data.getIntExtra("id", 0);
                 housekeeps.remove(pos);
+                dbManager.deleteData(id);
                 mainViewAdapter.notifyDataSetChanged();
             }
         }
