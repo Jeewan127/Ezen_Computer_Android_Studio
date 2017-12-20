@@ -66,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_change.setOnClickListener(new View.OnClickListener() {
+        /*btn_change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 text_change.setText(getString(R.string.hello));
             }
-        });
+        });*/
 
         result_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        third_sum.setOnClickListener(new View.OnClickListener() {
+        /*third_sum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String num1 = third_text1.getText().toString();
@@ -93,9 +93,9 @@ public class MainActivity extends AppCompatActivity {
                 third_text4.setText(getString(R.string.sum));
                 third_text3.setText(res.toString());
             }
-        });
+        });*/
 
-        third_minus.setOnClickListener(new View.OnClickListener() {
+        /*third_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String num1 = third_text1.getText().toString();
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 third_text4.setText(getString(R.string.minus));
                 third_text3.setText(res.toString());
             }
-        });
+        });*/
 
 
     }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.notepad.NotepadMainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/notepad_main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메모장"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/notepad_main_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+        <Button
+            android:id="@+id/notepad_main_plus"
+            android:layout_width="82dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="추가" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

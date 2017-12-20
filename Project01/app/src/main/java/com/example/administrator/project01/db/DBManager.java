@@ -36,12 +36,14 @@ public class DBManager extends SQLiteOpenHelper {
         db.execSQL("Insert into Content Values (null," + type + "," + cost + "," + year + "," + month + "," + day + ");");
     }
 
-    public ArrayList<Housekeep> getCostList() {
+    public ArrayList<Housekeep> getCostList(Integer nyear, Integer nmonth, Integer nday) {
         ArrayList<Housekeep> list = new ArrayList<>();
 
         SQLiteDatabase db = getReadableDatabase();
 
-        Cursor cursor = db.rawQuery("select * from Content;", null);
+        Cursor cursor = db.rawQuery("select * from Content where year=" + nyear + " and month =" +
+                nmonth + " and day =" + nday, null);
+
         while(cursor.moveToNext()) {
             Integer id = cursor.getInt(0);
             Integer type = cursor.getInt(1);

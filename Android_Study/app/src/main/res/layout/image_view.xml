@@ -53,14 +53,12 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textview1"
         android:layout_toLeftOf="@+id/textview1"
-        android:text="@string/greeting"
         android:textSize="26dp"
         />
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/name"
         android:layout_below="@+id/hi"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="10dp"/>
@@ -68,7 +66,6 @@
         android:id="@+id/number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/number"
         android:layout_below="@+id/name"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="100dp"/>

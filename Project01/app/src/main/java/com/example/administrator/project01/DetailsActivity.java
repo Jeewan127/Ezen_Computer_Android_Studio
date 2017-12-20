@@ -1,6 +1,8 @@
 package com.example.administrator.project01;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -50,10 +52,28 @@ public class DetailsActivity extends AppCompatActivity {
         details_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = getIntent();
-                intent.putExtra("pos", pos);
-                setResult(RESULT_OK, intent);
-                finish();
+
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(DetailsActivity.this);
+                alertDialog.setTitle("삭제");
+                alertDialog.setMessage("정말 삭제 하시겠습니까?");
+
+                alertDialog.setPositiveButton("네", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = getIntent();
+                        intent.putExtra("pos", pos);
+                        setResult(RESULT_OK, intent);
+                        finish();
+                    }
+                });
+                alertDialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+
+                alertDialog.show();
             }
         });
 

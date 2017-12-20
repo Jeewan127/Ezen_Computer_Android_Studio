@@ -1,5 +1,3 @@
 <resources>
     <string name="app_name">안드로이드 테스트 앱</string>
-    <string name="greeting">안녕</string>
-
 </resources>

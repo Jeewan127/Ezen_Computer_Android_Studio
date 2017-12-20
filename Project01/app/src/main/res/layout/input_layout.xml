@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:textSize="14.5sp"
             android:textColor="#4b4242"
-            android:text="2017/06/01"
+            android:text="123"
             android:layout_marginTop="9.3dp"
             android:layout_marginLeft="20dp"/>
 

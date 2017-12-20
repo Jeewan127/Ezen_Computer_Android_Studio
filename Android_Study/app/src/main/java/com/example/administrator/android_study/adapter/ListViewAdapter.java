@@ -23,26 +23,26 @@ public class ListViewAdapter extends BaseAdapter{
     ArrayList<Friend> items = new ArrayList<>();
 
     public ListViewAdapter(ArrayList<Friend> friends) {
-        this.items = friends;
-    }
+            this.items = friends;
+        }
 
-    @Override
-    public int getCount() {
-        return items.size();
-    }
+        @Override
+        public int getCount() {
+            return items.size();
+        }
 
-    @Override
-    public Object getItem(int i) {
-        return items.get(i);
-    }
+        @Override
+        public Object getItem(int i) {
+            return items.get(i);
+        }
 
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
+        @Override
+        public long getItemId(int i) {
+            return 0;
+        }
 
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup) {
         // 1번째 파라미터: 아이템의 인덱스, 리스트뷰에서 보일 아이템의 위치 정보, 0부터 시작하여 아이템의 개수만큼 파라미터로 전달
         // 2번째 파라미터: 현재 인덱스의 해당하는 뷰 객체를 의미
         // 3번째 파라미터: 이 뷰를 포함고 있는 부모 컨테이너 객체

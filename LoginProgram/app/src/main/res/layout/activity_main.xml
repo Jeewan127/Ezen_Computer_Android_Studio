@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.loginprogram.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp">
+
+        <TextView
+            android:id="@+id/main_login_id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디: "
+            android:layout_marginLeft="11.5dp"/>
+        <EditText
+            android:id="@+id/main_login_id_edit"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/main_login_id_text"
+            />
+
+        <TextView
+            android:id="@+id/main_login_pw_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_login_id_edit"
+            android:text="비밀번호: " />
+
+        <EditText
+            android:id="@+id/main_login_pw_edit"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/main_login_id_edit"
+            android:layout_toEndOf="@+id/main_login_pw_text" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:textSize="10dp"
+            android:text="회원가입"
+            android:layout_below="@+id/main_login_pw_edit"            />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:textSize="10dp"
+            android:text="Login"
+            android:layout_below="@+id/main_login_pw_edit"
+            android:layout_alignRight="@+id/main_login_pw_edit"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.android_study">
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,8 +28,11 @@
         <activity android:name=".Intent01Activity" />
         <activity android:name=".Intent02Activity" />
         <activity android:name=".IntentActivity" />
-        <activity android:name=".model.Animation02Activity"/>
-        <activity android:name=".DbTest01Activity">
+        <activity android:name=".model.Animation02Activity" />
+        <activity android:name=".DbTest01Activity" />
+        <activity android:name=".DialogActivity" />
+        <activity android:name=".model.BaseballActivity"/>
+        <activity android:name=".PermissionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

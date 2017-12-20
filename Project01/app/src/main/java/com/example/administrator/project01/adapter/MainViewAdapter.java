@@ -1,6 +1,9 @@
 package com.example.administrator.project01.adapter;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +12,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.administrator.project01.DetailsActivity;
 import com.example.administrator.project01.Housekeep;
+import com.example.administrator.project01.MainActivity;
 import com.example.administrator.project01.R;
 import com.example.administrator.project01.db.DBManager;
 
@@ -81,9 +86,26 @@ public class MainViewAdapter extends BaseAdapter {
         holder.main_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                items.remove(tmpI);
-                dbManager.deleteData(id);
-                notifyDataSetChanged();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(context); // 생성자에 contexte가 있고 메인에서 생성해주면서 메인을 받아오기 때문에 context로 사용
+                alertDialog.setTitle("삭제");
+                alertDialog.setMessage("정말 삭제 하시겠습니까?");
+
+                alertDialog.setPositiveButton("네", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        items.remove(tmpI);
+                        dbManager.deleteData(id);
+                        notifyDataSetChanged();
+                    }
+                });
+                alertDialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+                alertDialog.show();
             }
         });
         return convertView;

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="200dp">
+
+    <ImageView
+        android:id="@+id/dialog_img01"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00ffff"
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:id="@+id/dialog_img02"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#0000ff"
+        android:layout_toRightOf="@+id/dialog_img01"
+        android:layout_centerInParent="true"
+        />
+    <ImageView
+        android:id="@+id/dialog_img03"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#ff0d00"
+        android:layout_above="@+id/dialog_img02"
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:id="@+id/dialog_img04"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/dialog_img02"
+        android:layout_toRightOf="@+id/dialog_img01"
+        android:background="#ffff00"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
