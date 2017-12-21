@@ -17,7 +17,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".IntroActivity" />
-        <activity android:name=".PasswardActivity"></activity>
+        <activity android:name=".PasswardActivity" />
+        <activity android:name=".plusActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DaylistActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.calendardiary.plusActivity"    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FA5858">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Calendar Diary"/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        
+        <Button
+            android:id="@+id/plus_done"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="완료"
+            android:textSize="10dp"
+            android:background="@drawable/done"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4.5dp" />
+        
+        <TextView
+            android:id="@+id/plus_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:text="Date"
+            android:layout_centerInParent="true"
+            android:textSize="17dp"
+            android:textColor="#232323"/>
+
+        <Button
+            android:id="@+id/plus_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp" 
+            android:background="@drawable/ic_back_gray"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#414141"
+        android:layout_marginTop="3dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#"
+            android:textSize="16dp"/>
+        <EditText
+            android:id="@+id/plus_title"
+            android:layout_marginLeft="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:textSize="16dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#"
+            android:textSize="14dp"/>
+        <EditText
+            android:id="@+id/plus_emotion"
+            android:layout_marginLeft="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Emotion"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/plus_image"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:scaleType="centerInside"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/plus_context"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
+        android:layout_marginLeft="34.5dp"
+        android:layout_marginRight="34.5dp"
+        android:scrollbars="vertical"
+        android:hint="input context"
+        android:textSize="12dp"
+        android:background="@null"/>
+
+</LinearLayout>
+
+    <Button
+        android:id="@+id/plus_camera_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/camera"/>
+
+</RelativeLayout>

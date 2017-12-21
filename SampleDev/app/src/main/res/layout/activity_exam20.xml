@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kr.co.ezenac.tbja.sampledev.Exam20Activity">
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="left"
+        />
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="right"
+        android:layout_alignParentRight="true"
+        />
+    <ImageView
+        android:id="@+id/img_center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/img_1"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        >
+        <Button
+            android:id="@+id/btn_ani_alpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="alpha"
+            />
+        <Button
+            android:id="@+id/btn_ani_tran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="translate"
+            />
+        <Button
+            android:id="@+id/btn_ani_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="scale"
+            />
+    </LinearLayout>
+</RelativeLayout>

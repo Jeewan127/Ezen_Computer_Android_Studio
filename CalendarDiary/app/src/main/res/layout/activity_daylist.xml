@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.calendardiary.DaylistActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FA5858">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Calendar Diary"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#414141"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/main_home_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/home"
+            android:layout_centerVertical="true"
+            />
+        <Button
+            android:id="@+id/main_month_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/month"
+            android:layout_toRightOf="@+id/main_home_btn"
+            android:layout_marginLeft="70dp"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/main_chart_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/main_month_btn"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/chart"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/main_setting_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@id/main_chart_btn"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/setting"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#414141"/>
+
+
+</LinearLayout>

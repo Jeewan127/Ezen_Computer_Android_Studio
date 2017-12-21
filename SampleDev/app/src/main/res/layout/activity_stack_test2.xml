@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00ff00"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/move_activity_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity 2"
+        android:textSize="30dp"
+        />
+    <Button
+        android:id="@+id/btn_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start activity 1 (NO FLAG)"
+        />
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start activity 1 (FLAG_ACTIVITY_SINGLE_TOP)"
+        />
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start activity 1 (FLAG_ACTIVITY_CLEAR_TOP)"
+        />
+    <Button
+        android:id="@+id/btn_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start activity 1 (FLAG_ACTIVITY_NO_HISTORY)"
+        />
+    <Button
+        android:id="@+id/btn_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start activity 2 (NO FLAG)"
+        />
+    <Button
+        android:id="@+id/btn_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start activity 2 (FLAG_ACTIVITY_SINGLE_TOP)"
+        />
+    <Button
+        android:id="@+id/btn_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start activity 2 (FLAG_ACTIVITY_CLEAR_TOP)"
+        />
+    <Button
+        android:id="@+id/btn_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start activity 2 (FLAG_ACTIVITY_NO_HISTORY)"
+        />
+
+
+</LinearLayout>

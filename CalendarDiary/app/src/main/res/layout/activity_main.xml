@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:background="#FA5858">
 
         <TextView
@@ -19,71 +19,95 @@
             android:layout_centerInParent="true"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
+            android:textSize="20dp"
             android:text="Calendar Diary"/>
-
     </RelativeLayout>
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="#414141"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="45dp"
+        android:layout_height="30dp"
         android:layout_gravity="center_horizontal">
 
         <Button
             android:id="@+id/main_home_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:background="@drawable/home"
             android:layout_centerVertical="true"
             />
         <Button
             android:id="@+id/main_list_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:background="@drawable/list"
             android:layout_toRightOf="@+id/main_home_btn"
             android:layout_marginLeft="70dp"
             android:layout_centerVertical="true"/>
 
         <Button
-            android:id="@+id/main_plus_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:id="@+id/main_chart_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_toRightOf="@+id/main_list_btn"
             android:layout_marginLeft="70dp"
-            android:background="@drawable/plus"
+            android:background="@drawable/chart"
             android:layout_centerVertical="true"/>
 
         <Button
             android:id="@+id/main_setting_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_toRightOf="@id/main_plus_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@id/main_chart_btn"
             android:layout_marginLeft="70dp"
             android:background="@drawable/setting"
             android:layout_centerVertical="true"/>
 
     </RelativeLayout>
 
-    <view
-        android:layout_width="match_parent"
-        android:layout_height="0.4dp"
-        android:background="#414141"
-        android:layout_alignParentBottom="true"/>
-
-
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="#414141"/>
-    <ListView
-        android:id="@+id/main_listview"
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mcv_showOtherDates="defaults"
+        app:mcv_selectionColor="#00F" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#414141"/>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </ListView>
+
+        <ListView
+            android:id="@+id/main_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+        <Button
+            android:id="@+id/main_plus_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/plus"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+
 
 </LinearLayout>
