@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.retrofit2.MainActivity"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/retrofit_bin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get"/>
+
+    <Button
+        android:id="@+id/retrofit_bin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="book"/>
+
+    <Button
+        android:id="@+id/retrofit_bin3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="arraybook"/>
+
+</LinearLayout>
